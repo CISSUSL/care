@@ -1,0 +1,21 @@
+spring:
+  main:
+    banner-mode: "off"
+  datasource:
+    url: jdbc:mysql://localhost/care?useSSL=false
+    username: root
+    password: toor
+    dbcp2:
+      validation-query: SELECT 1
+      test-on-borrow: true 
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+        generate_statistics: false
